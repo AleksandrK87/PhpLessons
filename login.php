@@ -7,7 +7,8 @@ if(!empty($_POST)) {
 	$result = mysqli_query($conn, $sql);
 	$user = $result->fetch_assoc();
 	
-	if($user) {
+   if($user) {
+
 		if(isset($_POST['remember'])) {
 			setcookie('user_id', $user['id'], time()+60+60+24+30, '/' ); 
 		} else {
@@ -47,7 +48,7 @@ if(!empty($_POST)) {
                         <div>
                         <div>
                            <label class="custom-control custom-checkbox">
-                              <input type="checkbox" class="custom-control-input">
+                              <input type="checkbox" name="remember" value="1">
                               <span class="custom-control-indicator"></span>
                               <span class="custom-control-description small text-dark">Remember me on this computer</span>
                            </label>
