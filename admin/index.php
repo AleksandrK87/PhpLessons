@@ -1,19 +1,5 @@
 <?php
-require($_SERVER['DOCUMENT_ROOT'] . "/configs/db.php");
-
 require($_SERVER['DOCUMENT_ROOT'] . '/admin/partials/header.php');
-
-if (isset($_SESSION["user_id"]) && $_SESSION["user_id"] != null) {
-   $sql= "SELECT * FROM users WHERE id=" . $_SESSION["user_id"];
-   $result= mysqli_query($conn, $sql);
-   $user = $result->fetch_assoc();
-   
-   if($user['role'] != "admin") {
-      header("Location: /login.php");
-   } else {
-      header("Location: /login.php");
-   }
-}
 ?>
 
 
