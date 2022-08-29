@@ -214,14 +214,17 @@ require($_SERVER['DOCUMENT_ROOT'] . '/admin/partials/header.php');
             case 'edit':
                require($_SERVER['DOCUMENT_ROOT'] . '/admin/modules/users/edit.php');
 
-               break;
-            case 'edit':
-                  # code...
-               break;   
+               case 'add':
+                  require($_SERVER['DOCUMENT_ROOT'] . '/admin/modules/users/add.php');   
+
+            //   break;
+            //case 'edit':
+                 // # code...
+              // break;   
             
-            default:
+           // default:
                # code...
-               break;
+              // break;
          }
          }
          ?>
