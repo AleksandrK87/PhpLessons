@@ -29,7 +29,7 @@
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-         <a class="nav-link" href="/admin/users.php">
+         <a class="nav-link" href="http://site1/admin/users.php">
             <i class="fas fa-address-card"></i>
             <span>Users</span></a>
       </li>

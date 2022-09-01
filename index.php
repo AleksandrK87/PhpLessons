@@ -2,24 +2,22 @@
 require ('partials/header.php');
 ?>
 
-<?php 
-if(isset($_SESSION["user_id"]) && $_SESSION["user_id"] !=null) {
-  $sql= "SELECT * FROM users WHERE id=" . $_SESSION["user_id"];
-  $result= mysqli_query($conn, $sql);
-  $user = $result->fetch_assoc();
+<?php
+if(isLogin()) {
+  var_dump(getCurrentUser());
+?>
+
+  <h2>Hello, name</h2>
+<?php
+} else {
+  ?>
+  <h2>Hello</h2>
+  
+  <?php
+}
 
 ?>
 
-<h2>Hello, <?php echo $user['username']?></h2>
-<a href="logout.php">Logout</a>
-
-<?php
-} else {
-?>  
-
-<h2>Hello</h2>
-
-<?php } ?>
 
 <?php
 require ('partials/footer.php');
